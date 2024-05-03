@@ -11,12 +11,11 @@ This is a starter template using the following stack:
 - Auth - [NextAuth.js](https://next-auth.js.org)
 - Deployment - [Vercel](https://vercel.com/docs/concepts/next.js/overview)
 - Styling - [Tailwind CSS](https://tailwindcss.com)
-- Components - [Tremor](https://www.tremor.so)
+- Components - [Tremor](https://www.tremor.so) [Headless](https://headlessui.com/)
 - Analytics - [Vercel Analytics](https://vercel.com/analytics)
 - Linting - [ESLint](https://eslint.org)
 - Formatting - [Prettier](https://prettier.io)
 
-This template uses the new Next.js App Router. This includes support for enhanced layouts, colocation of components, tests, and styles, component-level data fetching, and more.
 
 ## Getting Started
 
