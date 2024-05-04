@@ -10,6 +10,14 @@ module.exports = {
     async rewrites() {
         return [
             {
+                "source": "/auth/signin",
+                "destination": "https://dev-auth.mitech.ai/api/auth/signin"
+            },
+            {
+                "source": "/auth/signup",
+                "destination": "https://dev-auth.mitech.ai/api/auth/signup"
+            },
+            {
                 "source": "/api/auth/:path*",
                 "destination": "https://dev-auth.mitech.ai/api/auth/:path*"
             },
