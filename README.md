@@ -26,7 +26,7 @@ Inside the Vercel Postgres dashboard, create a table based on the schema defined
 
 ## How to Run Develop Enviorment in Local 
 
-* rename `dev.next.config.js.sample` file to `dev.next.config.js`
+* copy `dev.next.config.js.sample` file to `dev.next.config.js`
 
 Finally, run the following commands to start the development server:
 
