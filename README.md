@@ -38,3 +38,24 @@ npm run dev
 You should now be able to access the application at http://localhost:3000.
 
 Make sure you haven't run multiple instances for the same application at the same time.
+
+
+## Authentication
+
+This application uses [NextAuth.js](https://next-auth.js.org) for authentication.
+
+### How to use?
+
+1. Create a new user in the database using the `/auth/signup` endpoint.
+
+2. Sign in using the `/auth/signin` endpoint.
+
+3. You can also use the `/api/auth/session` endpoint to check if a user is signed in.
+   * need to be included `<SessionProvider>` in the page. (check `app/layout.tsx`)
+
+4. You can also use the `/api/auth/signout` endpoint to sign out.
+
+### Refferences
+
+- [NextAuth.js](https://next-auth.js.org)
+- [NextAuth.js Documentation](https://next-auth.js.org/getting-started/example)
