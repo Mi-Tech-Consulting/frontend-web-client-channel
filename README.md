@@ -24,12 +24,17 @@ During the deployment, Vercel will prompt you to create a new Postgres database.
 Inside the Vercel Postgres dashboard, create a table based on the schema defined in this repository.
 
 
+## How to Run Develop Enviorment in Local 
+
+* rename `dev.next.config.js.sample` file to `dev.next.config.js`
 
 Finally, run the following commands to start the development server:
 
 ```
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
 You should now be able to access the application at http://localhost:3000.
+
+Make sure you haven't run multiple instances for the same application at the same time.
