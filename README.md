@@ -11,18 +11,23 @@ This is a starter template using the following stack:
 - Auth - [NextAuth.js](https://next-auth.js.org)
 - Deployment - [Vercel](https://vercel.com/docs/concepts/next.js/overview)
 - Styling - [Tailwind CSS](https://tailwindcss.com)
-- Components - [Tremor](https://www.tremor.so) [Headless](https://headlessui.com/)
+- Components - [Tremor](https://www.tremor.so) [Headless](https://headlessui.com/) [Heroicons](https://heroicons.com/)
 - Analytics - [Vercel Analytics](https://vercel.com/analytics)
 - Linting - [ESLint](https://eslint.org)
 - Formatting - [Prettier](https://prettier.io)
 
+# 🌈 Contribution guidelines
+```markdown
+Here is the procedure on how to work with the GitHub repo, when you want to start coding:
+1. Fork the origin repo to your PERSONAL PRIVATE repo
+2. Working on your new repo, (usually you wanna check out a few feature branches thus to keep the default branch easy to sync and merge from - it is a bit tricky)
+3. When your code is ready to merge, pls create a PULL REQUEST from your repo to the origin repo
+
+- branch: use `develop` branch as default
+- Pls let us know if you have any questions about this procedure
+```
 
 ## Getting Started
-
-During the deployment, Vercel will prompt you to create a new Postgres database. This will add the necessary environment variables to your project.
-
-Inside the Vercel Postgres dashboard, create a table based on the schema defined in this repository.
-
 
 ## How to Run Develop Enviorment in Local 
 
@@ -39,23 +44,30 @@ You should now be able to access the application at http://localhost:3000.
 
 Make sure you haven't run multiple instances for the same application at the same time.
 
-
 ## Authentication
 
 This application uses [NextAuth.js](https://next-auth.js.org) for authentication.
 
-### How to use?
+### How to Use
 
 1. Create a new user in the database using the `/auth/signup` endpoint.
 
 2. Sign in using the `/auth/signin` endpoint.
 
-3. You can also use the `/api/auth/session` endpoint to check if a user is signed in.
-   * need to be included `<SessionProvider>` in the page. (check `app/layout.tsx`)
+3. You will use the `/api/auth/session` endpoint to check if a user is signed in.
+   * use `useSession()` to fech the session data
 
 4. You can also use the `/api/auth/signout` endpoint to sign out.
+   * use `signOut()` to sign out
 
-### Refferences
+###👩‍💻 [NextAuth.js Endpoint Reference](https://next-auth.js.org/configuration/pages)
 
-- [NextAuth.js](https://next-auth.js.org)
-- [NextAuth.js Documentation](https://next-auth.js.org/getting-started/example)
+* login page - `/auth/signin`
+* register page - `/auth/signup`
+* error page: `/auth/error`
+* verifyRequest: `/auth/verify-request`
+* newUser: `/auth/new-user`
+
+
+[NextAuth.js API Reference](https://next-auth.js.org/getting-started/rest-api)
+
