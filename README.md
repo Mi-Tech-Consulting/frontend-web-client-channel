@@ -46,7 +46,7 @@ Here is the procedure on how to work with the GitHub repo, when you want to star
 
 Finally, run the following commands to start the development server:
 
-```shell
+```console
 npm install
 npm run dev
 ```
