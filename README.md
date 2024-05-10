@@ -15,17 +15,28 @@ This is a starter template using the following stack:
 - Analytics - [Vercel Analytics](https://vercel.com/analytics)
 - Linting - [ESLint](https://eslint.org)
 - Formatting - [Prettier](https://prettier.io)
+- Fetching - [Axios](https://github.com/axios/axios)
 
 # 🌈 Contribution guidelines
-```markdown
 Here is the procedure on how to work with the GitHub repo, when you want to start coding:
-1. Fork the origin repo to your PERSONAL PRIVATE repo
+1. Fork the origin repo to your `PERSONAL PRIVATE repo`
 2. Working on your new repo, (usually you wanna check out a few feature branches thus to keep the default branch easy to sync and merge from - it is a bit tricky)
 3. When your code is ready to merge, pls create a PULL REQUEST from your repo to the origin repo
+4. Before merging, pls make sure you have run the following commands:
+   ```shell
+   npm install
+   npm run build
+   ```
+   and then commit the changes to the PR
+5. Once the PR is approved, it will be merged to the origin repo
+6. Once the PR is merged, you can delete your PR branch
 
 - branch: use `develop` branch as default
+- Keep the code clean, style consistent
+- Try to use the dependent libraries we provide. If you have special needs, please contact @jhcao23 or @keyskull 
+- Always think about code reusability
 - Pls let us know if you have any questions about this procedure
-```
+
 
 ## Getting Started
 
@@ -35,7 +46,7 @@ Here is the procedure on how to work with the GitHub repo, when you want to star
 
 Finally, run the following commands to start the development server:
 
-```
+```shell
 npm install
 npm run dev
 ```
@@ -60,8 +71,11 @@ This application uses [NextAuth.js](https://next-auth.js.org) for authentication
 4. You can also use the `/api/auth/signout` endpoint to sign out.
    * use `signOut()` to sign out
 
-###👩‍💻 [NextAuth.js Endpoint Reference](https://next-auth.js.org/configuration/pages)
+### 👩‍💻 [NextAuth.js Endpoint Reference](https://next-auth.js.org/configuration/pages)
 
+[NextAuth.js API Reference](https://next-auth.js.org/getting-started/rest-api)
+
+##### Auth page routes:
 * login page - `/auth/signin`
 * register page - `/auth/signup`
 * error page: `/auth/error`
@@ -69,5 +83,12 @@ This application uses [NextAuth.js](https://next-auth.js.org) for authentication
 * newUser: `/auth/new-user`
 
 
-[NextAuth.js API Reference](https://next-auth.js.org/getting-started/rest-api)
 
+
+## Effective Tools sharing
+
+### v0: (AI)generative UI tool
+- Website: https://v0.dev/
+- This is the AI UI generation platform of Nextjs, you can easily generate UI components according to the prompts. 
+- In order to better adapt to our development environment, when using the prompt to generate pages, add the target prefix `Please use tailwind, tremor, headless UI and Heroicons packages to create page that...`
+- You can then add them to our project using the commands they provide. You should make sure that the elements used by AI in the code are implemented using our components. If not, please modify the code.
