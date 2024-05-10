@@ -71,7 +71,7 @@ This application uses [NextAuth.js](https://next-auth.js.org) for authentication
 4. You can also use the `/api/auth/signout` endpoint to sign out.
    * use `signOut()` to sign out
 
-### 👩‍💻 [NextAuth.js Endpoint Reference](https://next-auth.js.org/configuration/pages)
+## 👩‍💻 [NextAuth.js Endpoint Reference](https://next-auth.js.org/configuration/pages)
 
 [NextAuth.js API Reference](https://next-auth.js.org/getting-started/rest-api)
 
@@ -87,8 +87,7 @@ This application uses [NextAuth.js](https://next-auth.js.org) for authentication
 
 ## Effective Tools sharing
 
-### v0: (AI)generative UI tool
-- Website: https://v0.dev/
+### v0: [(AI)generative UI tool: https://v0.dev/](https://v0.dev/)
 - This is the AI UI generation platform of Nextjs, you can easily generate UI components according to the prompts. 
 - In order to better adapt to our development environment, when using the prompt to generate pages, add the target prefix `Please use tailwind, tremor, headless UI and Heroicons packages to create page that...`
 - You can then add them to our project using the commands they provide. You should make sure that the elements used by AI in the code are implemented using our components. If not, please modify the code.
