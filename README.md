@@ -11,11 +11,15 @@ This is a starter template using the following stack:
 - Auth - [NextAuth.js](https://next-auth.js.org)
 - Deployment - [Vercel](https://vercel.com/docs/concepts/next.js/overview)
 - Styling - [Tailwind CSS](https://tailwindcss.com)
-- Components - [Tremor](https://www.tremor.so) [Headless](https://headlessui.com/) [Heroicons](https://heroicons.com/)
+- UI Components - [NextUI](https://nextui.org/)
+- Icons - [Heroicons](https://heroicons.com/)
+- Data Visualization Components - [Tremor](https://www.tremor.so)
 - Analytics - [Vercel Analytics](https://vercel.com/analytics)
 - Linting - [ESLint](https://eslint.org)
 - Formatting - [Prettier](https://prettier.io)
 - Fetching - [Axios](https://github.com/axios/axios)
+- Data Format Validation [Zod](https://zod.dev/)
+
 
 # 🌈 Contribution guidelines
 Here is the procedure on how to work with the GitHub repo, when you want to start coding:
@@ -23,7 +27,7 @@ Here is the procedure on how to work with the GitHub repo, when you want to star
 2. Working on your new repo, (usually you wanna check out a few feature branches thus to keep the default branch easy to sync and merge from - it is a bit tricky)
 3. When your code is ready to merge, pls create a PULL REQUEST from your repo to the origin repo
 4. Before merging, pls make sure you have run the following commands:
-   ```shell
+   ```console
    npm install
    npm run build
    ```
@@ -38,9 +42,9 @@ Here is the procedure on how to work with the GitHub repo, when you want to star
 - Pls let us know if you have any questions about this procedure
 
 
-## Getting Started
+## 🙋‍♀️Getting Started
 
-## How to Run Develop Enviorment in Local 
+## How to Run a Develop Environment in Local 
 
 * copy `dev.next.config.js.sample` file to `dev.next.config.js`
 
@@ -71,7 +75,7 @@ This application uses [NextAuth.js](https://next-auth.js.org) for authentication
 4. You can also use the `/api/auth/signout` endpoint to sign out.
    * use `signOut()` to sign out
 
-## 👩‍💻 [NextAuth.js Endpoint Reference](https://next-auth.js.org/configuration/pages)
+## 👩‍💻[NextAuth.js Endpoint Reference](https://next-auth.js.org/configuration/pages)
 
 [NextAuth.js API Reference](https://next-auth.js.org/getting-started/rest-api)
 
@@ -84,10 +88,8 @@ This application uses [NextAuth.js](https://next-auth.js.org) for authentication
 
 
 
-
 ## Effective Tools sharing
-
 ### v0: [(AI)generative UI tool: https://v0.dev/](https://v0.dev/)
 - This is the AI UI generation platform of Nextjs, you can easily generate UI components according to the prompts. 
-- In order to better adapt to our development environment, when using the prompt to generate pages, add the target prefix `Please use tailwind, tremor, headless UI and Heroicons packages to create page that...`
+- In order to better adapt to our development environment, when using the prompt to generate pages, add the target prefix `Please use Tailwind CSS, NextUI and Heroicons packages to generate a page that...`
 - You can then add them to our project using the commands they provide. You should make sure that the elements used by AI in the code are implemented using our components. If not, please modify the code.
