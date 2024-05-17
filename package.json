@@ -15,8 +15,6 @@
     "@nextui-org/popover": "^2.1.21",
     "@nextui-org/react": "^2.3.6",
     "@tremor/react": "^3.14.1",
-    "@types/node": "^20.10.2",
-    "@types/react": "^18.2.41",
     "@types/react-dom": "18.2.18",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.5",
@@ -41,8 +39,10 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
+    "@types/node": "20.12.12",
+    "@types/react": "18.3.2",
     "eslint": "8.52.0",
     "eslint-config-next": "^14.1.0",
-    "typescript": "^5.2.2"
+    "typescript": "5.4.5"
   }
 }
