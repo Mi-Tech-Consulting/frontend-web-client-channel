@@ -95,6 +95,7 @@ export default {
   ],
   plugins: [
     require('@headlessui/tailwindcss'),
-    require('@tailwindcss/typography')
-  ]
+    require('@tailwindcss/typography'),
+      require("tailwindcss-animate")
+]
 } satisfies Config;
