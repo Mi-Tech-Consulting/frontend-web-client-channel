@@ -21,59 +21,59 @@ export default function indexPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <blockquote className="flex flex-col  bg-gray-100 dark:bg-gray-800"> 
-              <Link  href="https:google.com" >
+              <Link  href="/amazon" >
               <Image class="float-left" src={require('/public/amazon.jpg')}  width={48} height={48} />
               <div className="text-lg font-semibold hover:bg-sky-100"> Cod Commerce Amazon Channel</div>
               <div className="text-sm text-gray-500 dark:text-gray-400">Amzzon Channel free Plan available</div>
               </Link>
             </blockquote>
             <blockquote className="flex flex-col space-y-2 rounded-md bg-gray-100 dark:bg-gray-800">
-              <Link  href="https:google.com" >
+              <Link  href="/tiktok" >
               <Image class="float-left" src={require('/public/tiktok.jpg')}  width={48} height={48} />
               <div className="text-lg font-semibold hover:bg-sky-100"> TikTok</div>
               <div className="text-sm text-gray-500 dark:text-gray-400">Showcase your products to TikTok's billions of users</div>
               </Link>
             </blockquote>
             <blockquote className="flex flex-col  bg-gray-100 dark:bg-gray-800">
-              <Link  href="https:google.com" >
+              <Link  href="/facebook" >
               <Image class="float-left" src={require('/public/facebook.jpg')}  width={48} height={48}/>
               <div className="text-lg font-semibold hover:bg-sky-100"> Facebook & Instagram</div>
               <div className="text-sm text-gray-500 dark:text-gray-400">The official app from Meta sell on Facebook and Instagram</div>
               </Link>
             </blockquote>
             <blockquote className="flex flex-col bg-gray-100 dark:bg-gray-800">
-            <Link  href="https:google.com" > 
+            <Link  href="/linktree" > 
             <Image class="float-left" src={require('/public/linktree.jpg')}  width={48} height={48} />
             <div className="text-lg font-semibold hover:bg-sky-100"> Linktree</div>
             <div className="text-sm text-gray-500 dark:text-gray-400">  Free plan available,Reach new customers and increase sales</div>
             </Link>
             </blockquote>
             <blockquote className="flex flex-col  bg-gray-100 dark:bg-gray-800">
-            <Link  href="https:google.com" > 
+            <Link  href="/pinterest" > 
             <Image class="float-left" src={require('/public/pinterest.jpg')}  width={48} height={48} />
             <div className="text-lg font-semibold hover:bg-sky-100"> Pinterest</div>
             <div className="text-sm text-gray-500 dark:text-gray-400"> Put your products where people go to find ideas to try and buy</div>
             </Link>
             </blockquote>
             <blockquote className="flex flex-col space-y-2 rounded-md bg-gray-100 dark:bg-gray-800">
-            <Link  href="https:google.com" > 
+            <Link  href="/google" > 
             <Image class="float-left" src={require('/public/google.jpg')}  width={48} height={48} />
             <div className="text-lg font-semibold hover:bg-sky-100">Google & YouTube</div>
             <div className="text-sm text-gray-500 dark:text-gray-400">Access the best of Google and Youtube  </div>
             </Link>
             </blockquote>
             <blockquote className="flex flex-col bg-gray-100  dark:bg-gray-800">
-            <Link  href="https:google.com" > 
+            <Link  href="/shopify" > 
             <Image class="float-left" src={require('/public/shopify.jpg')}  width={48} height={48} />
             <div className="text-lg font-semibold hover:bg-sky-100">Shopify Market Connect</div>
             <div className="text-sm text-gray-500 dark:text-gray-400">Sell on Amazon,Walmart,eBay and Etsy </div>
             </Link>
             </blockquote>
             <blockquote className="flex flex-col bg-gray-100 dark:bg-gray-800">
-            <Link  href="https:google.com" > 
+            <Link  href="/faire" > 
             <Image class="float-left" src={require('/public/shop.jpg')}  width={48} height={48} />
-            <div className="text-lg font-semibold hover:bg-sky-100"> Shop</div>
-            <div className="text-sm text-gray-500 dark:text-gray-400">Boots your brand presence and connect with customers on shop test test test test </div>
+            <div className="text-lg font-semibold hover:bg-sky-100"> Faire: Sell Wholesale</div>
+            <div className="text-sm text-gray-500 dark:text-gray-400">Sell Wholesale to independent Retailers worldwide</div>
             </Link>
             </blockquote>
       
