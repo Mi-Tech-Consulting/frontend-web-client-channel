@@ -1,0 +1,3 @@
+[submodule "packages/shared-components"]
+	path = packages/shared-components
+	url = https://github.com/Mi-Tech-Consulting/shared-components
