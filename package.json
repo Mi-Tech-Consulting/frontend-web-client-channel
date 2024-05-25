@@ -12,10 +12,12 @@
     "@auth/core": "^0.28.1",
     "@hookform/resolvers": "^3.3.4",
     "@mitech/shared-components": "file:packages/shared-components",
+    "@radix-ui/react-slot": "^1.0.2",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.5",
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.5",
+    "class-variance-authority": "^0.7.0",
     "next": "^14.2.3",
     "sharp": "*",
     "zod": "^3.23.7"
@@ -28,13 +30,13 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "*",
+    "@types/node": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
     "cross-env": "^7.0.3",
     "eslint": "*",
     "eslint-config-next": "*",
-    "typescript": "*",
     "prettier": "*",
-    "@types/node": "*",
-    "@types/react": "*",
-    "@types/react-dom": "*"
+    "typescript": "*"
   }
 }
