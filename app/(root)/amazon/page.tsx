@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from "next/image";
-import { Button } from "@/components/ui/button"
+import {Button, ButtonGroup} from "@nextui-org/button"
 
 export default  function Page()
 {
@@ -27,11 +27,10 @@ export default  function Page()
                     </div>
                 </div>
                 <div>
-                <Button asChild className="w-full px-4 py-2 font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700"
+                <Button className="w-full px-4 py-2 font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700"
                     type="submit">
                     <Link href="/Install">Install</Link>
                 </Button>
-               
                 </div>
               </div>
               <iframe
