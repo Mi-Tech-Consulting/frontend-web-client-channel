@@ -1,4 +1,4 @@
-// "use client"
+"use client"
 import LandingPageView from './LandingPageView';
 import Image from 'next/image';
 import Link from 'next/link';
