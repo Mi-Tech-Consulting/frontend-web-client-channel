@@ -28,13 +28,13 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "*",
-    "@types/node": "*",
-    "@types/react": "*",
-    "@types/react-dom": "*",
     "cross-env": "^7.0.3",
     "eslint": "*",
     "eslint-config-next": "*",
+    "typescript": "*",
     "prettier": "*",
-    "typescript": "*"
+    "@types/node": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*"
   }
 }
