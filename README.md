@@ -75,9 +75,10 @@ This application uses [NextAuth.js](https://next-auth.js.org) for authentication
 4. You can also use the `/api/auth/signout` endpoint to sign out.
    * use `signOut()` to sign out
 
-## 👩‍💻[NextAuth.js Endpoint Reference](https://next-auth.js.org/configuration/pages)
+## 👩‍💻Api Reference
 
-[NextAuth.js API Reference](https://next-auth.js.org/getting-started/rest-api)
+* [Server API Document](https://doc.mitech.ai/) (`Use your work email in the Lark app to verify your permission.`)
+* [NextAuth.js API Reference](https://next-auth.js.org/getting-started/rest-api)
 
 ##### Auth page routes:
 * login page - `/auth/signin`
