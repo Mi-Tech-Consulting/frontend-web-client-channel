@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "preinstall": "cross-env-shell \"if [ \"$PREINSTALL_CMD\" == \"\" ] then echo \"\" else $PREINSTALL_CMD fi\"",
+    "preinstall": "cross-env-shell \"$PREINSTALL_CMD\"",
     "start": "next start",
     "lint": "next lint"
   },
