@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "preinstall": "cross-env-shell \"$PREINSTALL_CMD\"",
+    "postinstall": "cross-env-shell \"$PREINSTALL_CMD\"",
     "start": "next start",
     "lint": "next lint"
   },
