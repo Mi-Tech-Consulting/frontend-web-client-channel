@@ -28,6 +28,7 @@ Here is the procedure on how to work with the GitHub repo, when you want to star
 3. When your code is ready to merge, pls create a PULL REQUEST from your repo to the origin repo
 4. Before merging, pls make sure you have run the following commands:
    ```console
+   git submodule update --init
    npm install
    npm run build
    ```
