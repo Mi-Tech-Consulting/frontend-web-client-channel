@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postinstall": "cross-env-shell \"$PREINSTALL_CMD\"",
+    "vercel_install": "cross-env-shell \"$PREINSTALL_CMD\"",
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,7 +17,6 @@
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.5",
     "next": "^14.2.3",
-    "sharp": "*",
     "zod": "^3.23.7"
   },
   "prettier": {
