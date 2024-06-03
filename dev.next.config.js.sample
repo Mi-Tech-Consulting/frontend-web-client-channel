@@ -16,12 +16,12 @@ module.exports = {
             },
             {
                 "source": "/auth/signup",
-                "destination": "https://dev-auth-api.mitech.ai/api/auth/signin",
+                "destination": "https://dev-auth-api.mitech.ai/api/auth/signup",
                 "basePath": false
             },
             {
                 "source": "/api/auth/:path*",
-                "destination": "https://dev-auth-api.mitech.ai/api/auth/signin",
+                "destination": "https://dev-auth-api.mitech.ai/api/auth/:path*",
                 "basePath": false
             }
         ]
