@@ -1,18 +1,13 @@
 /** @type {import('next').NextConfig} */
 
 
-var devconfig;
+var devconfig = {};
 try {
-
   devconfig = require('./dev.next.config.js')
-
-} catch (ex) {
-
-}
+} catch (ex) {}
 
 
 const nextConfig = {
-  ...(devconfig ? devconfig : {}),
   basePath: '/channel',
   crossOrigin: 'use-credentials',
   images: {
@@ -26,7 +21,8 @@ const nextConfig = {
         hostname: 'avatar.vercel.sh'
       }
     ]
-  }
+  },
+  ...devconfig,
 };
 
 module.exports = nextConfig;

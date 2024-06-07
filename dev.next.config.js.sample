@@ -1,12 +1,5 @@
 
-
-
-
-
-
-
-
-module.exports = {
+const config = {
     async rewrites() {
         return [
             {
@@ -27,3 +20,5 @@ module.exports = {
         ]
     },
 }
+
+module.exports = config;
