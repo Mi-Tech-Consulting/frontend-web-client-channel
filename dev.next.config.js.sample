@@ -1,24 +1,24 @@
 
+
+
 const config = {
     async rewrites() {
-        return [
-            {
-                "source": "/auth/signin",
-                "destination": "https://dev-auth-api.mitech.ai/api/auth/signin",
-                "basePath": false
-            },
-            {
-                "source": "/auth/signup",
-                "destination": "https://dev-auth-api.mitech.ai/api/auth/signup",
-                "basePath": false
-            },
-            {
-                "source": "/api/auth/:path*",
-                "destination": "https://dev-auth-api.mitech.ai/api/auth/:path*",
-                "basePath": false
-            }
-        ]
-    },
+        return {
+            fallback: [
+                {
+                    'source': '/',
+                    'destination': 'https://dev.mitech.ai/',
+                    'basePath': false
+                },
+                {
+                    'source': '/:path*',
+                    'destination': 'https://dev.mitech.ai/:path*',
+                    'basePath': false
+                },
+            ]
+        };
+    }
 }
+
 
 module.exports = config;
