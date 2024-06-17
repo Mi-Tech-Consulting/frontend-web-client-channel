@@ -5,7 +5,7 @@ import { SessionProvider } from 'next-auth/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { NextUIProvider } from '@nextui-org/react';
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import Frame  from '@mitech/shared-components/component/frame-with-sidebar-and-navbar';
+import Navbar from '@/packages/shared-components/ui/navbar';
 export const metadata = {
   title: 'Welcome to Mitech Recruitment',
   description:
@@ -20,14 +20,12 @@ export default async function RootLayout({
 
   return (
     <html lang="en" >
-      <body className="static h-full bg-gray-50">
+      <body className="h-full bg-gray-50 min-w-full min-h-full">
         <SessionProvider>
           <NextUIProvider>
             <NextThemesProvider attribute="class" defaultTheme='light'>
               <main className="text-foreground bg-background">
-                <Frame>
-                  {children}
-                </Frame>
+                {children}
               </main>
               <Analytics />
               <SpeedInsights />{/* Vercel Speed Insights */}
