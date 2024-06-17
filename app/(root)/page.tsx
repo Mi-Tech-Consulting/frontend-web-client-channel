@@ -1,13 +1,9 @@
 "use client"
-import LandingPageView from './LandingPageView';
+import LandingPageView from '@/components/component/landing-page-view';
 
 
-export default function IndexPage({
-  searchParams
-}: {
-  searchParams: { q: string };
-}) {
+export default function IndexPage() {
 
   return (
-    <LandingPageView searchParams={searchParams}></LandingPageView>);
+    <LandingPageView></LandingPageView>);
 }

@@ -1,13 +1,8 @@
 "use client";
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function IndexPage({
-    searchParams
-}: {
-    searchParams: { q: string };
-}) {
+export default function IndexPage() {
 
     return (
     <main className="min-h-screen bg-gray-100 flex flex-col">
