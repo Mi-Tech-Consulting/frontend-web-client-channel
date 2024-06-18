@@ -4,9 +4,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "vercel_install": "cross-env-shell \"$PREINSTALL_CMD\"",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel_install": "npm i -g cross-env && cross-env-shell \"$PREINSTALL_CMD\"",
+    "package_init": "git submodule update --init --recursive && npm install",
+    "package_update": "git submodule update --remote --recursive && npm install"
+
   },
   "dependencies": {
     "@auth/core": "^0.28.1",
