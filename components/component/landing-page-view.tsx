@@ -1,11 +1,18 @@
 "use client";
 import { Footer } from '@/packages/shared-components/ui/footer';
 import { Button, Card, CardBody, Image } from "@nextui-org/react";
-import { JSX, SVGProps } from 'react';
+import { JSX, SVGProps, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Navbar from '@/packages/shared-components/ui/navbar';
 
 export default function IndexPage() {
+  const [channels, setChannels] = useState([]);
+
+  useEffect(()=>{
+    fetch('/api/channel/list')
+    .then(response => response.json())
+    .then(data => setChannels(data.result));
+  },[]);
 
   return (<>
     <Navbar />
