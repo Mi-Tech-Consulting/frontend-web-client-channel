@@ -28,8 +28,9 @@ import { Button, ButtonGroup } from "@nextui-org/button"
 import { Textarea } from "@nextui-org/react"
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import { JSX, SVGProps} from 'react';
 
-export default function channelpage() {
+export default function ChannelPage() {
 
     const getParams = useSearchParams();
     const searchid = getParams.get("id");
@@ -121,7 +122,7 @@ export default function channelpage() {
   )
 }
 
-function CheckIcon(props) {
+function CheckIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -141,7 +142,7 @@ function CheckIcon(props) {
 }
 
 
-function StarIcon(props) {
+function StarIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

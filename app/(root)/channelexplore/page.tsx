@@ -67,7 +67,7 @@ export default function IndexPage({
                       {/* <Link href={data.link}> */}
                       {/* <Link href="/channelpage"> */}
                       <Link href={`/channelpage?id=${item.id}&name=${item.name}&`}> 
-                       <Image className="float-left" src="/channel/amazon.jpg" width={48} height={48} alt={item.title} />
+                       <Image className="float-left" src="/channel/amazon.jpg" width={48} height={48} alt={item.name} />
                         <div className="text-lg font-semibold hover:bg-sky-100"> {item.name}</div>
                         <div className="text-sm text-gray-500 dark:text-gray-400">{item.name}</div>
                       </Link>

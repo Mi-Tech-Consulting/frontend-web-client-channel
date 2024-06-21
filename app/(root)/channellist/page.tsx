@@ -18,12 +18,13 @@ To read more about using these font, please visit the Next.js documentation:
 - Pages Directory: https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 **/
 "use client"
-import { useState,useEffect } from "react"
+import React, { useState,useEffect,ChangeEvent, JSX, SVGProps} from 'react';
+//import { useState,useEffect } from "react"
 import Image from "next/image"
 import {Input} from "@nextui-org/input"
 import Link from "next/link"
  
-export default function channellist() {
+export default function ChannelList() {
 
     const [results, setResults] = useState<
     {
@@ -37,11 +38,8 @@ export default function channellist() {
         }[]
    
     }>();
-
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
+ 
+    useEffect(() => {
     fetch('/api/channel/list').then((res) => res.json())
    // fetch('/channel/api/channel/list').then((res) => res.json())
       .then((data) => setResults(data));
@@ -50,7 +48,7 @@ export default function channellist() {
 
   const [searchTerm, setSearchTerm] = useState("")
 
-    const handleFilter = (event) => {
+    const handleFilter = (event:ChangeEvent<HTMLInputElement>) => {
         const term = event.target.value.toLowerCase()
         setSearchTerm(term)
 
@@ -104,7 +102,7 @@ export default function channellist() {
   )
 }
 
-function AppleIcon(props) {
+function AppleIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -125,7 +123,7 @@ function AppleIcon(props) {
 }
 
 
-function ChromeIcon(props) {
+function ChromeIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -149,7 +147,7 @@ function ChromeIcon(props) {
 }
 
 
-function ComponentIcon(props) {
+function ComponentIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -172,7 +170,7 @@ function ComponentIcon(props) {
 }
 
 
-function FacebookIcon(props) {
+function FacebookIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -192,7 +190,7 @@ function FacebookIcon(props) {
 }
 
 
-function InstagramIcon(props) {
+function InstagramIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -214,7 +212,7 @@ function InstagramIcon(props) {
 }
 
 
-function SearchIcon(props) {
+function SearchIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -235,7 +233,7 @@ function SearchIcon(props) {
 }
 
 
-function ShoppingCartIcon(props) {
+function ShoppingCartIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -256,7 +254,7 @@ function ShoppingCartIcon(props) {
   )
 }
 
- function StoreIcon(props) {
+ function StoreIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
