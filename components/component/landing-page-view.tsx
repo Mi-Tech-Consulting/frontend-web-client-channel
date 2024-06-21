@@ -4,10 +4,11 @@ import { Button, Card, CardBody, Image } from "@nextui-org/react";
 import { JSX, SVGProps, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Navbar from '@/packages/shared-components/ui/navbar';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function IndexPage() {
   const [channels, setChannels] = useState([]);
-
+  const router = useRouter();
   useEffect(()=>{
     fetch('/api/channel/list')
     .then(response => response.json())
@@ -20,10 +21,10 @@ export default function IndexPage() {
       <header className="bg-gray-900 text-gray-50 py-4 px-6 md:px-8 flex items-center justify-between">
         <Link href="#" className="flex items-center gap-2">
           <StoreIcon className="h-8 w-8" />
-          <span className="text-xl font-semibold">Advertiment Channels</span>
+          <span className="text-xl font-semibold">Advertisement Channels</span>
         </Link>
         <div className="flex items-center gap-4">
-          <Link href="#" className="hover:underline underline-offset-4" >
+          <Link href="/channelexplore" className="hover:underline underline-offset-4" >
             Explore Channels
           </Link>
           <Link href="#" className="hover:underline underline-offset-4">
@@ -41,7 +42,7 @@ export default function IndexPage() {
                 Browse our curated selection of apps to enhance your online store and grow your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-2">
-                <Button>Explore Channels</Button>
+                <Button  onClick={() => router.push('/channellist')}>Explore Channels</Button>
                 <Button variant="light">Become a Developer</Button>
               </div>
             </div>
@@ -66,7 +67,7 @@ export default function IndexPage() {
                   <CardBody className="p-4 space-y-2">
                     <h3 className="text-xl font-semibold">Google Ads</h3>
                     <p className="text-gray-500 dark:text-gray-400">
-                      Recover lost sales with automated abandoned cart emails.
+                      Recover lots sales with automated abandoned cart emails.
                     </p>
                     <Button size="sm">Install</Button>
                   </CardBody>
