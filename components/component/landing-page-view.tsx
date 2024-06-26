@@ -1,18 +1,26 @@
 "use client";
 import { Footer } from '@/packages/shared-components/ui/footer';
-import { Button, Card, CardBody, Image } from "@nextui-org/react";
+import { Button, Card, CardBody, Image, CardFooter } from "@nextui-org/react";
 import { JSX, SVGProps, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Navbar from '@/packages/shared-components/ui/navbar';
 
 export default function IndexPage() {
-  const [channels, setChannels] = useState([]);
+  const [channels, setChannels] = useState<{
+    id?: string,
+    name?: string,
+    image?: string,
+    description?: string,
+    owner_id?: string,
+    createAt?: string,
+    updateAt?: string,
+  }[]>([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch('/api/channel/list')
-    .then(response => response.json())
-    .then(data => setChannels(data.result));
-  },[]);
+      .then(response => response.json())
+      .then(data => setChannels(data.result));
+  }, []);
 
   return (<>
     <Navbar />
@@ -55,7 +63,30 @@ export default function IndexPage() {
             <div>
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Featured Apps</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <Card className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden items-center">
+                {
+                  channels.slice(0, 6).map((channel, index) => (
+                    <Card key={index} className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden items-between">
+                      <CardBody className="p-4 space-y-2">
+                        <Image
+                          src={channel.image ?? "/channel/placeholder.svg"}
+                          width={400}
+                          height={300}
+                          alt="App Image"
+                          className="w-full aspect-video object-cover"
+                        />
+                      </CardBody>
+                      <CardFooter className="p-4 space-y-2" >
+                        <div></div>
+                        <h3 className="text-xl font-semibold">{channel.name}</h3>
+                        <p className="text-gray-500 dark:text-gray-400">
+                          {channel.description}
+                        </p>
+                        <Button size="sm">Install</Button>
+                      </CardFooter>
+                    </Card>
+                  ))
+                }
+                {/* <Card className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden items-center">
                   <Image
                     src="/channel/google.jpg"
                     width={400}
@@ -100,7 +131,7 @@ export default function IndexPage() {
                     </p>
                     <Button size="sm">Install</Button>
                   </CardBody>
-                </Card>
+                </Card> */}
               </div>
             </div>
             <div>

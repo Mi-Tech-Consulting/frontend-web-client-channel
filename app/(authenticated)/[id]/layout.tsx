@@ -1,10 +1,5 @@
-import '../globals.css';
+import '../../globals.css';
 
-import { Analytics } from '@vercel/analytics/react';
-import { SessionProvider } from 'next-auth/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { NextUIProvider } from '@nextui-org/react';
-import { ThemeProvider as NextThemesProvider } from "next-themes";
 import Frame from '@mitech/shared-components/component/frame-with-sidebar-and-navbar';
 export const metadata = {
   title: 'Welcome to Mitech Recruitment',
