@@ -3,7 +3,7 @@ import { Footer } from '@/packages/shared-components/ui/footer';
 import { Button, Card, CardBody, Image, CardFooter } from "@nextui-org/react";
 import { JSX, SVGProps, useEffect, useState } from 'react';
 import Link from 'next/link';
-import Navbar from '@/packages/shared-components/ui/navbar';
+import Navbar from '@/packages/shared-components/ui/navbars/navbar-1';
 
 export default function IndexPage() {
   const [channels, setChannels] = useState<{
