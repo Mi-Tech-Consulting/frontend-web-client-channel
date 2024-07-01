@@ -3,27 +3,44 @@
  * @see https://v0.dev/t/As7nvorvs9c
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react"
-import { Button } from "@nextui-org/react"
+'use client';
+import { Card, CardHeader, CardBody, CardFooter, Checkbox, Input } from "@nextui-org/react"
 import { Image } from "@nextui-org/react"
 import { Accordion, AccordionItem } from "@nextui-org/react"
 import { JSX, SVGProps } from "react"
+import { Divider } from "@nextui-org/divider";
+import {  Button, useDisclosure } from "@nextui-org/react";
+import {  useSession } from 'next-auth/react';
+import SigninModal from "@/packages/shared-components/ui/signin-modal";
+import { useRouter } from "next/navigation";
 
-export default function Component(props : {  id: string }) {
+
+export default function Component(props: { id: string }) {
+    const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
+    const { data: session } = useSession();
+    const user = session?.user;
+    const router = useRouter();
     return (
         <div className="bg-background text-foreground">
-            <header className="bg-primary text-primary-foreground py-6 px-4 md:px-8 lg:px-12">
+            <header className="flex flex-row text-primary-background py-8 px-4 md:px-8 lg:px-12 justify-between items-center">
                 <div className="container mx-auto flex items-center gap-4">
                     <div className="flex items-center gap-4">
                         <Image src="/channel/placeholder.svg" width={64} height={64} alt="App Icon" className="rounded-lg" />
                         <div>
                             <h1 className="text-2xl font-bold">Acme Inventory Manager</h1>
-                            <p className="text-sm text-primary-foreground/80">by Acme Inc.</p>
+                            <p className="text-sm text-primary-background/80">by Acme Inc.</p>
                         </div>
                     </div>
                 </div>
+                <Button color="primary" className="rounded-lg" 
+                onClick={()=>!user ? onOpen : router.push(`/${props.id}/install`)}>
+                    Install
+                </Button>
+               {!user && <SigninModal onClose={onClose} isOpen={isOpen} />}
+
             </header>
-            <main className="container mx-auto py-12 px-4 md:px-8 lg:px-12">
+            <Divider />
+            <main className="container mx-auto py-8 px-4 md:px-8 lg:px-12">
                 <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     <div className="col-span-2 lg:col-span-1">
                         <h2 className="text-2xl font-bold mb-4">About the App</h2>
@@ -210,7 +227,7 @@ export default function Component(props : {  id: string }) {
                                     <span className="text-sm font-medium">5.0</span>
                                 </div>
                                 <p className="text-sm">
-                                &quot;I&apos;ve tried several inventory management apps, but Acme\n Inventory Manager is by far the best. The
+                                    &quot;I&apos;ve tried several inventory management apps, but Acme\n Inventory Manager is by far the best. The
                                     user interface is\n intuitive, and the features are exactly what I need.&quot;
                                 </p>
                                 <div className="mt-4 flex items-center gap-2">
@@ -235,7 +252,7 @@ export default function Component(props : {  id: string }) {
                                     <span className="text-sm font-medium">3.8</span>
                                 </div>
                                 <p className="text-sm">
-                                &quot;Acme Inventory Manager has a few quirks, but overall it&apos;s a\n solid product. The customer support
+                                    &quot;Acme Inventory Manager has a few quirks, but overall it&apos;s a\n solid product. The customer support
                                     team has been very\n helpful in addressing my concerns.&quot;
                                 </p>
                                 <div className="mt-4 flex items-center gap-2">
@@ -285,7 +302,7 @@ export default function Component(props : {  id: string }) {
                     </div>
                 </section>
             </main>
-        </div>
+        </div >
     )
 }
 

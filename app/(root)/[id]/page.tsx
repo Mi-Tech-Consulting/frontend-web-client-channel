@@ -2,13 +2,13 @@
 import Link from 'next/link';
 import Image from "next/image";
 import { Button, ButtonGroup } from "@nextui-org/button"
-import AppDetailPageView from '@/components/component/app-detail-page-view';
+import ChannelDetailPageView from '@/components/component/channel-detail-page-view';
 
 
 
 export default function Page({ params }: { params: { id: string } }) {
 
-    return (<AppDetailPageView id={params.id} />)
+    return (<ChannelDetailPageView id={params.id} />)
 }
 
 // export default function Page({ params }: { params: { id: string } }) {

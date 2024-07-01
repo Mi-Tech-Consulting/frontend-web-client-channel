@@ -21,7 +21,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className='scroll-smooth'>
-      <body className="h-full bg-gray-50 min-w-full min-h-full">
+      <body className="bg-gray-50 min-w-screen min-h-screen">
         <SessionProvider>
           <NextUIProvider>
             <NextThemesProvider attribute="class" defaultTheme='light'>
