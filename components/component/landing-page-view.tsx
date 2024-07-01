@@ -35,8 +35,8 @@ export default function IndexPage() {
           <span className="text-xl font-semibold">Advertiment Channels</span>
         </Link>
         <div className="flex items-center gap-4">
-          <Link href="#" className="hover:underline underline-offset-4" >
-            Explore Channels
+        <Link href="/explorechannel" className="hover:underline underline-offset-4" >
+          Explore Channels
           </Link>
           <Link href="#" className="hover:underline underline-offset-4">
             Develop Channels
@@ -53,7 +53,7 @@ export default function IndexPage() {
                 Browse our curated selection of apps to enhance your online store and grow your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-2">
-                <Button>Explore Channels</Button>
+                <Button onClick={() => router.push('/explorechannel')}>Explore Channels</Button>
                 <Button variant="light">Become a Developer</Button>
               </div>
             </div>

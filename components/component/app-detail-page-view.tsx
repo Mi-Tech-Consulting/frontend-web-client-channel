@@ -3,11 +3,12 @@
  * @see https://v0.dev/t/As7nvorvs9c
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
+"use client"
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react"
 import { Button } from "@nextui-org/react"
 import { Image } from "@nextui-org/react"
 import { Accordion, AccordionItem } from "@nextui-org/react"
-import { JSX, SVGProps } from "react"
+import { JSX, SVGProps } from 'react'
 
 export default function Component(props : {  id: string }) {
     return (
