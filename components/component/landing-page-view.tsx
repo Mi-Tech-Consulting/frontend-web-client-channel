@@ -4,6 +4,7 @@ import { Button, Card, CardBody, Image, CardFooter } from "@nextui-org/react";
 import { JSX, SVGProps, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Navbar from '@/packages/shared-components/ui/navbars/navbar-1';
+import { useRouter } from 'next/navigation';
 
 export default function IndexPage() {
   const [channels, setChannels] = useState<{
@@ -15,6 +16,9 @@ export default function IndexPage() {
     createAt?: string,
     updateAt?: string,
   }[]>([]);
+
+  const router = useRouter();
+
 
   useEffect(() => {
     fetch('/api/channel/list')
@@ -66,7 +70,7 @@ export default function IndexPage() {
                 {
                   channels.slice(0, 6).map((channel, index) => (
                     <Card key={index} className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden items-between">
-                      <CardBody className="p-4 space-y-2">
+                      <CardBody className="p-4 space-y-2" onClick={()=>router.push(`/${channel.id}`)}>
                         <Image
                           src={channel.image ?? "/channel/placeholder.svg"}
                           width={400}
