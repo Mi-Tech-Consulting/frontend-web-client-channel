@@ -6,9 +6,9 @@ import AppDetailPageView from '@/components/component/app-detail-page-view';
 
 
 
-export default function Page({ id }: { id: string }) {
+export default function Page({ params }: { params: { id: string } }) {
 
-    return (<AppDetailPageView id={id} />)
+    return (<AppDetailPageView id={params.id} />)
 }
 
 // export default function Page({ params }: { params: { id: string } }) {
